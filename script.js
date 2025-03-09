@@ -4,8 +4,11 @@ let seconds = 0;
 let clock;
 
 function playBeep() {
-  const beep = new Audio("https://www.soundjay.com/button/beep-07.wav");
-  beep.play().catch((error) => console.log("Audio playback failed:", error));
+  const audio = $("#alarm-sound").get(0); // Отримуємо DOM-елемент аудіо
+  audio.play().catch((error) => {
+    console.error("Audio play error:", error);
+    alert("Audio cannot be played. Please check your browser settings.");
+  });
 }
 
 $(".start-btn").click(function () {
@@ -19,7 +22,6 @@ $(".start-btn").click(function () {
   }
 
   if (hours === 0 && minutes === 0 && seconds === 0) {
-    playBeep();
     return;
   }
 
