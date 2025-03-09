@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <div class="clock-container">
+      <div class="timer-container">
+        <span id="hours">00</span> : <span id="minutes">00</span> :
+        <span id="seconds">00</span>
+      </div>
+      <button class="start-btn active">Start</button>
+      <button class="reset-btn active">Reset</button>
+    </div>
+    <input
+      id="hours-input"
+      class="time-input"
+      type="number"
+      name="time"
+      placeholder="hours"
+      min="0"
+    />
+    <input
+      id="minutes-input"
+      class="time-input"
+      type="number"
+      name="time"
+      placeholder="minutes"
+      min="0"
+      max="59"
+    />
+    <input
+      id="seconds-input"
+      class="time-input"
+      type="number"
+      name="time"
+      placeholder="seconds"
+      min="0"
+      max="59"
+    />
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.min.js"
+      integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
